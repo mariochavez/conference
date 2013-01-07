@@ -14,3 +14,6 @@ nbproject
 *.swo
 *.un~
 *.swp
+.dat3edb.002
+.rbenv-version
+vendor/*

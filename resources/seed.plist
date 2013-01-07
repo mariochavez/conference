@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>talks</key>
+	<dict>
+		<key>item 0</key>
+		<dict>
+			<key>talkId</key>
+			<integer>1</integer>
+			<key>presenterId</key>
+			<integer>1</integer>
+			<key>title</key>
+			<string>The Future of Work</string>
+			<key>day</key>
+			<integer>1</integer>
+			<key>time</key>
+			<string>9:00AM</string>
+			<key>keynote</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>presenters</key>
+	<dict>
+		<key>item 0</key>
+		<dict>
+			<key>name</key>
+			<string>Scott Chacon</string>
+			<key>presenterId</key>
+			<integer>1</integer>
+			<key>twitter</key>
+			<string>@chacon</string>
+			<key>bio</key>
+			<string>Bio info</string>
+			<key>picture</key>
+			<string>images/chacon.png</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

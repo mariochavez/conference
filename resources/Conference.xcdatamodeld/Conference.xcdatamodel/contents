@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Presenter" representedClassName="Presenter" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="presenterId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="talks" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Talk" inverseName="presenter" inverseEntity="Talk" syncable="YES"/>
+    </entity>
+    <entity name="Talk" representedClassName="Talk">
+        <attribute name="day" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="keynote" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="presenterId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="talkId" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="presenter" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presenter" inverseName="talks" inverseEntity="Presenter" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Presenter" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Talk" positionX="261" positionY="189" width="128" height="150"/>
+    </elements>
+</model>
