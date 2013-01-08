@@ -22,9 +22,22 @@ class AppDelegate
       PListRW.copyPlistFileFromBundle(:seed)
       seed = PListRW.plistObject(:seed, Hash)
 
-      seed['talks'].each do |key, value|
-        t = Talk.createWithHash(value)
+      presenters = []
+      seed['presenters'].each do |presenter_attrs|
+        presenters << Presenter.createWithHash(presenter_attrs)
       end
+
+      seed['talks'].each do |talk_attrs|
+        talk = Talk.createWithHash(talk_attrs)
+        presenter = presenters.select{|p| p.presenterId == talk.presenterId }.first
+
+        talk.presenter = presenter
+        talk.save
+
+        presenter.addTalk(talk)
+        presenter.save
+      end
+
     end
   end
 end

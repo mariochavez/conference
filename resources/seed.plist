@@ -3,8 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>talks</key>
-	<dict>
-		<key>item 0</key>
+	<array>
+		<dict>
+			<key>talkId</key>
+			<integer>3</integer>
+			<key>presenterId</key>
+			<integer>3</integer>
+			<key>title</key>
+			<string>Go go fast as developer</string>
+			<key>day</key>
+			<integer>3</integer>
+			<key>time</key>
+			<string>9:00am</string>
+			<key>keynote</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>talkId</key>
+			<integer>2</integer>
+			<key>presenterId</key>
+			<integer>2</integer>
+			<key>title</key>
+			<string>Rails 4 and the future of web</string>
+			<key>day</key>
+			<integer>2</integer>
+			<key>time</key>
+			<string>9:00am</string>
+			<key>keynote</key>
+			<true/>
+		</dict>
 		<dict>
 			<key>talkId</key>
 			<integer>1</integer>
@@ -19,10 +46,33 @@
 			<key>keynote</key>
 			<true/>
 		</dict>
-	</dict>
+	</array>
 	<key>presenters</key>
-	<dict>
-		<key>item 0</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Dr. Nic</string>
+			<key>presenterId</key>
+			<integer>3</integer>
+			<key>twitter</key>
+			<string>@drnic</string>
+			<key>bio</key>
+			<string>Bio info</string>
+			<key>picture</key>
+			<string>images/drnic.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Aaron Patterson</string>
+			<key>presenterId</key>
+			<integer>2</integer>
+			<key>twitter</key>
+			<string>@tenderlove</string>
+			<key>bio</key>
+			<string>Bio info</string>
+			<key>picture</key>
+			<string>images/tenderlove.png</string>
+		</dict>
 		<dict>
 			<key>name</key>
 			<string>Scott Chacon</string>
@@ -35,6 +85,6 @@
 			<key>picture</key>
 			<string>images/chacon.png</string>
 		</dict>
-	</dict>
+	</array>
 </dict>
 </plist>

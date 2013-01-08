@@ -7,6 +7,15 @@ module ModelSupport
   module ClassMethods
     def createWithHash(attributes)
       localContext = NSManagedObjectContext.MR_contextForCurrentThread
+
+      model = buildWithHash(attributes)
+      localContext.MR_save
+
+      model
+    end
+
+    def buildWithHash(attributes)
+      localContext = NSManagedObjectContext.MR_contextForCurrentThread
       klass = self.name
 
       model = klass.constantize.MR_createInContext(localContext)
@@ -19,9 +28,13 @@ module ModelSupport
         model.send("#{idAttribute}=", maxId + 1)
       end
 
-      localContext.MR_save
       model
     end
+  end
+
+  def save
+    localContext = NSManagedObjectContext.MR_contextForCurrentThread
+    localContext.MR_save
   end
 
   def inspect
