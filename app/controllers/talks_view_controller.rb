@@ -11,15 +11,11 @@ class TalksViewController < UIViewController
     @reuseIdentifier ||= 'TalkCell'
 
     cell = tv.dequeueReusableCellWithIdentifier(@reuseIdentifier) || begin
-    TalkCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier:@reuseIdentifier)
+    TalkViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier:@reuseIdentifier)
     end
 
-    team = self.dataSource[indexPath.row]
-    #cell.pointsImage.image = UIImage.imageNamed('points.png')
-    #cell.team_name.text = team.name
-    #cell.city_info.text = team.city
-    #cell.points.text = team.points.to_s
-    #cell.logo.image = UIImage.imageNamed('guadalajara-mini.png')
+    talk = self.dataSource[indexPath.row]
+    cell.setupTalk(talk)
 
     cell
   end
@@ -29,12 +25,13 @@ class TalksViewController < UIViewController
   end
 
   def viewDidLoad
-    day = case filter
-          when 'DayOne' then 1
-          when 'DayTwo' then 2
-          when 'DayThree' then 3
+    day, title = case filter
+          when 'DayOne' then [1, 'Day One']
+          when 'DayTwo' then [2, 'Day Two']
+          when 'DayThree' then [3, 'Day Three']
           end
 
+    self.title = title
     self.dataSource = Talk.talksByDay(day)
   end
 end

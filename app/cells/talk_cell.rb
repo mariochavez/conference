@@ -1,2 +1,0 @@
-class TalkCell < UITableViewCell
-end

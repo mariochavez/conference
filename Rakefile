@@ -2,6 +2,7 @@
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project'
 require 'rubygems'
+require 'ib'
 require 'motion-cocoapods'
 require 'motion_support/all'
 require 'bundler'

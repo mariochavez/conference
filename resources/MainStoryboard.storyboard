@@ -37,7 +37,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Day one" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Day One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -59,7 +59,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Day two" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6tf-ve-dFF">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Day Two" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6tf-ve-dFF">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -162,11 +162,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7zj-nK-LZL">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="TalkCell" rowHeight="115" id="jMp-td-cid" customClass="TalkViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TalkCell" rowHeight="115" id="jMp-td-cid" customClass="TalkViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chacon.png" translatesAutoresizingMaskIntoConstraints="NO" id="OgC-os-NEo">
@@ -177,6 +177,7 @@
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Keynote: The Future of work" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Seq-lb-80N">
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="2sz-hW-x0q"/>
                                                         <constraint firstAttribute="height" constant="44" id="b7q-4t-1eu"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
@@ -207,14 +208,19 @@
                                             <constraint firstItem="Seq-lb-80N" firstAttribute="top" secondItem="jMp-td-cid" secondAttribute="top" constant="20" type="default" id="40e-Kc-zb1"/>
                                             <constraint firstItem="OgC-os-NEo" firstAttribute="centerY" secondItem="jMp-td-cid" secondAttribute="centerY" type="default" id="4gb-Td-gka"/>
                                             <constraint firstItem="QiA-aE-PAT" firstAttribute="top" secondItem="Seq-lb-80N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FCv-n3-zy1"/>
-                                            <constraint firstItem="OgC-os-NEo" firstAttribute="leading" secondItem="jMp-td-cid" secondAttribute="leading" constant="20" type="default" id="H3Y-ep-uGv"/>
                                             <constraint firstItem="hnp-dx-lUj" firstAttribute="bottom" secondItem="QiA-aE-PAT" secondAttribute="bottom" type="default" id="Sib-cC-08P"/>
                                             <constraint firstItem="QiA-aE-PAT" firstAttribute="leading" secondItem="OgC-os-NEo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Tie-SM-LeH"/>
                                             <constraint firstItem="Seq-lb-80N" firstAttribute="leading" secondItem="OgC-os-NEo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Wvj-b7-x8Y"/>
-                                            <constraint firstAttribute="trailing" secondItem="Seq-lb-80N" secondAttribute="trailing" constant="20" type="default" id="chG-Xd-81a"/>
-                                            <constraint firstAttribute="trailing" secondItem="hnp-dx-lUj" secondAttribute="trailing" constant="20" type="default" id="eFs-v6-9Cd"/>
+                                            <constraint firstItem="OgC-os-NEo" firstAttribute="leading" secondItem="jMp-td-cid" secondAttribute="leading" constant="12" id="mbj-gH-ETw"/>
+                                            <constraint firstItem="hnp-dx-lUj" firstAttribute="trailing" secondItem="Seq-lb-80N" secondAttribute="trailing" type="default" id="prx-qu-BYW"/>
                                             <constraint firstItem="hnp-dx-lUj" firstAttribute="top" secondItem="Seq-lb-80N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zQe-Cy-tkf"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="day" destination="hnp-dx-lUj" id="X3N-EU-6oT"/>
+                                            <outlet property="picture" destination="OgC-os-NEo" id="dQV-ia-gaV"/>
+                                            <outlet property="speaker" destination="QiA-aE-PAT" id="2FH-Af-SbJ"/>
+                                            <outlet property="talk" destination="Seq-lb-80N" id="2ex-tn-XWH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -284,6 +290,21 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TalkViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TalkViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="day" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="speaker" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="talk" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TalksViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TalksViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="viewDidLoad"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
