@@ -114,6 +114,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="i0M-4g-q8c" kind="push" id="KfH-Qi-1B4"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="fB4-ml-YIE" style="IBUITableViewCellStyleDefault" id="sLO-Ag-LCM">
                                         <rect key="frame" x="0.0" y="176" width="320" height="44"/>
@@ -243,6 +246,75 @@
             </objects>
             <point key="canvasLocation" x="1006" y="64"/>
         </scene>
+        <!--Presenters View Controller - Speakers-->
+        <scene sceneID="HEQ-hT-Wxl">
+            <objects>
+                <tableViewController id="i0M-4g-q8c" customClass="PresentersViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="k0r-xt-aNL">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PresenterCell" rowHeight="100" id="h0Z-1F-Qtr" customClass="PresenterViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chacon.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Fh-vF-ScS">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="72" id="LsI-st-yB4"/>
+                                                <constraint firstAttribute="height" constant="72" id="r4O-1S-Xbb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Scott Chacon" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="ySf-UE-beA">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="kYA-N4-SET"/>
+                                                <constraint firstAttribute="width" constant="200" id="obY-cL-iaN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" red="0.12354803089999999" green="0.3442583978" blue="0.4149597585" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="@chacon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dma-fg-A1d">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="GNZ-ee-Kp2"/>
+                                                <constraint firstAttribute="width" constant="124" id="go7-FK-nH9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="6Fh-vF-ScS" firstAttribute="leading" secondItem="h0Z-1F-Qtr" secondAttribute="leading" constant="12" id="3Sm-Gn-5p8"/>
+                                    <constraint firstItem="ySf-UE-beA" firstAttribute="leading" secondItem="6Fh-vF-ScS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="SxE-gy-usp"/>
+                                    <constraint firstAttribute="bottom" secondItem="dma-fg-A1d" secondAttribute="bottom" constant="21" id="VCr-3d-FUb"/>
+                                    <constraint firstItem="dma-fg-A1d" firstAttribute="leading" secondItem="6Fh-vF-ScS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="aOL-R4-Cjj"/>
+                                    <constraint firstItem="6Fh-vF-ScS" firstAttribute="centerY" secondItem="h0Z-1F-Qtr" secondAttribute="centerY" type="default" id="vDz-DW-kTC"/>
+                                    <constraint firstItem="ySf-UE-beA" firstAttribute="top" secondItem="h0Z-1F-Qtr" secondAttribute="top" constant="20" type="default" id="ywD-5w-3vg"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="name" destination="ySf-UE-beA" id="8DM-YF-dZV"/>
+                                    <outlet property="picture" destination="6Fh-vF-ScS" id="Fxq-iY-Ptu"/>
+                                    <outlet property="twitter" destination="dma-fg-A1d" id="g17-MK-5RT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i0M-4g-q8c" id="jL4-Pv-K1L"/>
+                            <outlet property="delegate" destination="i0M-4g-q8c" id="hO3-XY-fdD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Speakers" id="QcN-gX-25k"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msw-K3-WsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="770"/>
+        </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
@@ -272,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="753"/>
+            <point key="canvasLocation" x="436" y="756"/>
         </scene>
     </scenes>
     <resources>
@@ -291,9 +363,25 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="PresenterViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PresenterViewCell.h"/>
+            <relationships>
+                <relationship kind="action" name="setupPresenter:"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="twitter" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PresentersViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PresentersViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="viewDidLoad"/>
+            </relationships>
+        </class>
         <class className="TalkViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TalkViewCell.h"/>
             <relationships>
+                <relationship kind="action" name="setupTalk:"/>
                 <relationship kind="outlet" name="day" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="speaker" candidateClass="UILabel"/>
