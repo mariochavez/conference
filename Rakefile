@@ -15,7 +15,7 @@ Motion::Project::App.setup do |app|
 
   app.frameworks += %w(CoreData CoreLocation MapKit)
 
-  app.files.unshift Dir.glob(File.join(app.project_dir, 'app/lib/**/*.rb'))
+  app.files.unshift *Dir.glob(File.join(app.project_dir, 'app/lib/**/*.rb'))
 
   app.pods do
     pod 'MagicalRecord', '~> 2.0.0'

@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'xcodeproj', '~> 0.3.0'
+gem 'xcodeproj'
 gem 'ib'
 gem 'motion-cocoapods'
 gem 'motion_support'

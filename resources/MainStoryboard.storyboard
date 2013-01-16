@@ -427,7 +427,8 @@
         <class className="VenueViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VenueViewController.h"/>
             <relationships>
-                <relationship kind="action" name="viewDidLoad"/>
+                <relationship kind="action" name="setMapLocation"/>
+                <relationship kind="action" name="viewDidAppear:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
