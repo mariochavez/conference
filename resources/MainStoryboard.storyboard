@@ -393,45 +393,6 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="PresenterViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PresenterViewCell.h"/>
-            <relationships>
-                <relationship kind="action" name="setupPresenter:"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="twitter" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PresentersViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PresentersViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="viewDidLoad"/>
-            </relationships>
-        </class>
-        <class className="TalkViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TalkViewCell.h"/>
-            <relationships>
-                <relationship kind="action" name="setupTalk:"/>
-                <relationship kind="outlet" name="day" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="speaker" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="talk" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TalksViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TalksViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="viewDidLoad"/>
-            </relationships>
-        </class>
-        <class className="VenueViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VenueViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="setMapLocation"/>
-                <relationship kind="action" name="viewDidAppear:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
