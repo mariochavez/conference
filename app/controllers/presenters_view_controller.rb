@@ -23,6 +23,6 @@ class PresentersViewController < UIViewController
   end
 
   def viewDidLoad
-    self.dataSource = Presenter.findAll
+    self.dataSource = Presenter.MR_findAll
   end
 end
